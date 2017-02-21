@@ -1,4 +1,6 @@
 #!/bin/bash
+exec &>/tmp/output
+date
 isExistApp = `pgrep httpd`
 if [[ -n  $isExistApp ]]; then
     service httpd stop        
